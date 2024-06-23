@@ -1,34 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:four_ideas/screens/home_screen.dart';
+import 'package:sizer/sizer.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('4iDeas App'),
-        ),
-        body: const Center(
-          child: Column(
-            children: [
-              Text(
-                '4iDeas',
-                style: TextStyle(fontSize: 24),
-              ),
-              SizedBox(height: 20),
-              Text(
-                'This text comes from the CI/CD pipeline!',
-                style: TextStyle(fontSize: 16, color: Colors.blue),
-              ),
-            ],
-          ),
-        ),
-      ),
+    return Sizer(
+
+      builder: (context, orientation, deviceType) {
+        return const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: HomeScreen(),
+        );
+      },
+
     );
   }
 }
