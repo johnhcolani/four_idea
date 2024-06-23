@@ -14,9 +14,18 @@ class MyApp extends StatelessWidget {
           title: const Text('4iDeas App'),
         ),
         body: const Center(
-          child: Text(
-            '4iDeas',
-            style: TextStyle(fontSize: 24),
+          child: Column(
+            children: [
+              Text(
+                '4iDeas',
+                style: TextStyle(fontSize: 24),
+              ),
+              SizedBox(height: 20),
+              Text(
+                'This text comes from the CI/CD pipeline!',
+                style: TextStyle(fontSize: 16, color: Colors.blue),
+              ),
+            ],
           ),
         ),
       ),
