@@ -7,7 +7,7 @@ on:
 
 jobs:
   build_and_deploy:
-    runs-on: ubuntu-latest  # Ubuntu is generally fine for web builds
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
