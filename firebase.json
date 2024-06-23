@@ -1,7 +1,7 @@
 {
   "firestore": {
-    "rules": "firestorm.rules",
-    "indexes": "firestorm.indexes.json"
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
   },
   "hosting": {
     "public": "build/web",
